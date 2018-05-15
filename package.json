@@ -2,7 +2,7 @@
   "name": "breakout-game",
   "version": "1.0.0",
   "author": "",
-  "description": "Breakout Game in Javascript / ES6",
+  "description": "Breakout Game in Javascript / ES5 / ES6",
   "main": "webpack.config.js",
   "browserslist": [
     "> 1%",

@@ -1,2 +1,4 @@
 # BreakOutGame
-Game for fun :D
+
+## Pure Javascript Game on Canvas 
+
