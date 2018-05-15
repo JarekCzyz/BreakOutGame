@@ -1,0 +1,55 @@
+.ui__wrapper { 
+    position: absolute;
+    left: 500px;
+    top: 0px;
+    width: 140px;
+    height: 400px;
+    background: #dadada;
+    padding:2em 1em;
+
+    .btn {
+        position:absolute;
+        left:1em;
+        bottom:4em;
+        top:auto;
+        width: 100px;
+        cursor: pointer;
+        text-align: center;
+        background: transparent;
+        border:1px black solid;
+        outline:none;
+        border-radius: 6px;
+        padding:0.2em 1em;
+        // transition: transform 0.3s ease; 
+        
+        // background: transparent url("../gfx/play.svg") center center no-repeat;
+    	// &:active, &:focus {
+    	// 	transform: translateY(5px);
+    	// }
+    	&:hover {
+            background:black;
+            color:white
+        }
+
+        &.btn-play {
+            border:1px red solid;
+            bottom:2em;
+            &:hover {
+                background: red;
+            }
+        }
+    }
+    span {
+        font-size:14px;
+    }
+
+    .ico {
+    	display: inline-block;
+    	width:inherit;
+    	// padding: 0  .6em;
+        max-width:18px;
+        position: absolute;
+        left:0;
+        top:3px;
+    }
+}

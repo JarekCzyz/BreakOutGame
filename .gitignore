@@ -1,0 +1,7 @@
+*.sublime-project
+*.sublime-workspace
+package-lock.json
+*-workspace
+/build
+/node_modules
+.DS_Store
