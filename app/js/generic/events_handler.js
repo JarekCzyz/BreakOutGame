@@ -13,8 +13,12 @@ class EventsHandler extends UI {
         this.body.addEventListener('keydown', this.keyDownHandler.bind(this))
         this.body.addEventListener('keyup', this.keyUpHandler.bind(this))
         
-        this.playButton[0]
-            .addEventListener('click', this.handlerPlayButton)
+        for (let index = 0; index < this.playButton.length; index++) {
+            const element = this.playButton[index];
+            
+            element.addEventListener('click', this.handlerPlayButton)
+            
+        }
         this.pauseButton[0]
             .addEventListener('click', this.handlerPauseButton)
     }
@@ -29,6 +33,13 @@ class EventsHandler extends UI {
 
     updateScore(scoreCounter) {
         this.score[0].children[0].innerText = scoreCounter
+    }
+
+    handlerPlayButtonDialog(btnPlay) {
+        btnPlay.addEventListener('click',  (event) => {
+            event.preventDefault();
+            this.closeDialog();
+        });
     }
 
     handlerPlayButton(event) {

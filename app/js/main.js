@@ -14,6 +14,7 @@ const LivesGame = require('./components/lives.js')
 const LevelGame = require('./components/level.js')
 const Paddle = require('./components/paddle.js')
 const Ball = require('./components/ball.js')
+const DialogContainer = require('./components/dialog.js')
 
 class BreakoutGame {
 
@@ -26,6 +27,9 @@ class BreakoutGame {
         this.livesGame = new LivesGame()
         this.scoreGame = new ScoreGame()
         this.levelGame = new LevelGame()
+
+        this.dialogView = new DialogContainer();
+        this.dialogView.init()
     }
 
     updateDraw() {
