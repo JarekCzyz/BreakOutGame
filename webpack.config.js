@@ -4,7 +4,9 @@ const {
     webpack,
     Optimize,
     ExtractTextPlugin,
-    HtmlWebpackPlugin
+    HtmlWebpackPlugin,
+    CopyWebpackPlugin,
+    CleanWebpackPlugin
 } = require('./webpack/config.js');
 
 var TARGET = process.env.npm_lifecycle_event;
@@ -21,7 +23,12 @@ if (TARGET === 'build') {
             template: './app/index.html'
         })
     }
-
+let pathsToClean = [
+    path.resolve(__dirname, './build')
+]
+let cleanOptions = {
+    allowExternal: true
+}
 
 module.exports = {
     // Everything flows from this file
@@ -41,7 +48,7 @@ module.exports = {
                 test: /\.(js)$/,
                 enforce: "pre",
                 exclude: [
-                    /bower_components/, 
+                    /bower_components/,
                     /node_modules/
                 ],
 				use: [
@@ -64,7 +71,7 @@ module.exports = {
                 use: ["css-loader", "sass-loader"]
             })
         }, {
-            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            test: /\.(ttf|eot|svg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: 'file-loader'
         }, {
             test: /\.html$/,
@@ -72,7 +79,16 @@ module.exports = {
         }],
     },
     plugins: [
+        new CleanWebpackPlugin(pathsToClean, cleanOptions),
         htmlPlugin,
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('style.css'),
+        new CopyWebpackPlugin([
+            {
+                from: 'gfx/**/*',
+                to: __dirname + '/build',
+                context: __dirname + '/app/'
+                // flatten: true
+            }
+        ])
     ]
 }

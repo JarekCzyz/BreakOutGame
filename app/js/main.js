@@ -1,4 +1,4 @@
-// App game 
+// App game
 require('../sass/main.scss')
 
 const {
@@ -6,15 +6,16 @@ const {
     canvas,
     reversePosition,
     eventsHandler
-} = require('./core.js') 
- 
+} = require('./core.js')
+
 const BrickElement = require('./components/bricks.js')
 const ScoreGame = require('./components/score.js')
 const LivesGame = require('./components/lives.js')
 const LevelGame = require('./components/level.js')
 const Paddle = require('./components/paddle.js')
 const Ball = require('./components/ball.js')
-const DialogContainer = require('./components/dialog.js')
+
+const DialogContainer = require('./partials/dialog.js')
 
 class BreakoutGame {
 

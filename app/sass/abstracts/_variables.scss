@@ -15,7 +15,8 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 
-
+// Header font
+$font: font('HKGrotesk-Regular');
 
 
 /// Copy text color
@@ -68,9 +69,9 @@ $breakpoints: (
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: '/gfx/' !default;
 
 $dl_width: 600px;
 $dl_height: 400px;
 
-$dl_bg: #dbdbdb;
+$dl_bg: #000;

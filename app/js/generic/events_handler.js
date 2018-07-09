@@ -36,10 +36,10 @@ class EventsHandler extends UI {
     }
 
     handlerPlayButtonDialog(btnPlay) {
-        btnPlay.addEventListener('click',  (event) => {
-            event.preventDefault();
-            this.closeDialog();
-        });
+        // btnPlay.addEventListener('click',  (event) => {
+        //     event.preventDefault();
+        //     this.closeDialog();
+        // });
     }
 
     handlerPlayButton(event) {

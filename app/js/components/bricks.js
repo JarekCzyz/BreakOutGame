@@ -6,20 +6,19 @@ const {
 class BrickElement {
 
     constructor() {
-        this.brickRowCount = 5
-        this.brickColumnCount = 6
+        this.brickRowCount = 10
         this.brickPadding = 4
         this.brickHeight = 18
+        this.brickWidth = 80
+        this.brickColumnCount = (window.innerWidth / this.brickWidth) //6
         this.brickOffsetTop = 0
         this.brickOffsetLeft = 0
-        
-        this.brickWidth = 80
+
         this.brickStatus = 1
         this.bricks = []
 
         this.bricksImg = new Image();
-        this.bricksImg.src = '../app/gfx/element_blue_rectangle.png'
-    
+        this.bricksImg.src = '../app/gfx/bricks.png'
     }
 
     setWidth() {

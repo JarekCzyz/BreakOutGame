@@ -1,7 +1,7 @@
 {
   "name": "breakout-game",
   "version": "1.0.0",
-  "author": "",
+  "author": "Jaroslaw Czyz",
   "description": "Breakout Game in Javascript / ES5 / ES6",
   "main": "webpack.config.js",
   "browserslist": [
@@ -16,14 +16,17 @@
   "scripts": {
     "jshint": "jshint app/js",
     "serve": "webpack-dev-server --watch",
-    "build": "webpack --config webpack-prod.config.js -p & http-server ./build"
+    "build-prod": "webpack --config webpack-prod.config.js -p & http-server ./build"
   },
   "license": "ISC",
   "devDependencies": {
+    "autosize": "4.0.2",
     "babel-core": "6.21.0",
     "babel-loader": "6.4.1",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.16.0",
+    "clean-webpack-plugin": "0.1.19",
+    "copy-webpack-plugin": "4.5.2",
     "css-loader": "0.28.10",
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "1.1.9",

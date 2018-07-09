@@ -16,8 +16,7 @@ class Paddle {
         this.temp = this.basePosition()
 
         this.paddleImg = new Image();
-        this.paddleImg.src = '../app/gfx/paddleBlu.png'
-    
+        this.paddleImg.src = '../app/gfx/paddings.png'
     }
 
     basePosition() {

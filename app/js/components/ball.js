@@ -21,7 +21,7 @@ class Ball {
         this.temp = this.basePosition()
 
         this.ball = new Image();
-        this.ball.src = '../app/gfx/ballBlue.png'
+        this.ball.src = '../app/gfx/ballblue.png'
     }
 
     basePosition() {
